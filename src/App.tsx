@@ -1,12 +1,8 @@
-import Layout from "@layout/Layout";
-import { DndContext } from "@dnd-kit/core";
+import router from "@router";
+import { RouterProvider } from "react-router-dom";
 
 function App() {
-  return (
-    <DndContext>
-      <Layout />
-    </DndContext>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

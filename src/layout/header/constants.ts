@@ -2,15 +2,15 @@ import { TabsProps } from "antd";
 
 export const items: TabsProps["items"] = [
   {
-    key: "1",
+    key: "",
     label: "WIDGET",
   },
   {
-    key: "2",
+    key: "flow",
     label: "FLOW",
   },
   {
-    key: "3",
+    key: "preview",
     label: "PREVIEW",
   },
 ];

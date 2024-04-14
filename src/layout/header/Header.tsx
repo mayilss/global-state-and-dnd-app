@@ -2,10 +2,12 @@ import { Button, Flex, Tabs, Typography } from "antd";
 import { PencilLine } from "lucide-react";
 import { items } from "./constants";
 import styles from "./header.styles";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   const onTabChange = (key: string) => {
-    console.log(key);
+    navigate(key);
   };
 
   return (
@@ -13,7 +15,7 @@ export default function Header() {
       component="header"
       justify="space-between"
       align="center"
-      style={styles.headerWrapper}
+      style={styles.wrapper}
     >
       <Flex gap={8}>
         <Typography.Text>Task Template</Typography.Text>

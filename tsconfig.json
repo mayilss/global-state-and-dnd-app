@@ -9,7 +9,9 @@
       "@libs": ["src/libs"],
       "@store": ["src/store"],
       "@components": ["src/components"],
-      "@layout": ["src/layout"]
+      "@layout": ["src/layout"],
+      "@router": ["src/router"],
+      "@pages": ["src/pages"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,
