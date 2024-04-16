@@ -1,7 +1,7 @@
 import Fieldset from "@components/fieldset/Fieldset";
 import { Col, Flex, Typography } from "antd";
 import { X } from "lucide-react";
-import { questionTypes } from "./constants";
+import { questionTypes } from "@constants";
 import DraggableItem from "@components/draggable-item/DraggableItem";
 import styles from "./leftSideBar.styles";
 
@@ -15,7 +15,7 @@ export default function LeftSideBar() {
       <Fieldset legend="Question Type">
         <Flex wrap="wrap">
           {questionTypes.map((qt) => (
-            <Col span={8} style={styles.fieldsetItem}>
+            <Col key={qt.id} span={8} style={styles.fieldsetItem}>
               <DraggableItem
                 icon={qt.icon}
                 label={qt.label}

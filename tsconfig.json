@@ -11,7 +11,9 @@
       "@components": ["src/components"],
       "@layout": ["src/layout"],
       "@router": ["src/router"],
-      "@pages": ["src/pages"]
+      "@pages": ["src/pages"],
+      "@constants": ["src/constants"],
+      "@models": ["src/models"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

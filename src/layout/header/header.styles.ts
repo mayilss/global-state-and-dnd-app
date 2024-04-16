@@ -1,8 +1,9 @@
+import { colors } from "@constants";
 import React from "react";
 
 const wrapper: React.CSSProperties = {
   padding: "8px 16px 0px 16px",
-  backgroundColor: "#fff",
+  backgroundColor: colors.white,
   borderBottom: "1px solid #f3f3f3",
 };
 

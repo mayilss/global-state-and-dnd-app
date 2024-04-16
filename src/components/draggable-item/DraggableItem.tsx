@@ -4,6 +4,7 @@ import { GripHorizontal } from "lucide-react";
 import React from "react";
 import { CSS } from "@dnd-kit/utilities";
 import styles from "./draggableItem.styles";
+import { colors } from "@constants";
 
 type DraggableItemProps = {
   icon: React.ReactNode;
@@ -34,7 +35,7 @@ export default function DraggableItem({ icon, label, id }: DraggableItemProps) {
     >
       {icon}
       <Typography.Text style={styles.label}>{label}</Typography.Text>
-      <GripHorizontal color="#c3c3c3" width={20} />
+      <GripHorizontal color={colors.grey} width={20} />
     </Flex>
   );
 }

@@ -3,9 +3,10 @@ import React from "react";
 
 export function useGlobalState<T>(
   store: Store<T>,
-  key: keyof T
+  key: keyof T,
+  initState: T = store.getState()
 ): [T[keyof T], (value: T[keyof T]) => void] {
-  const [globalState, setGlobalState] = React.useState(store.getState());
+  const [globalState, setGlobalState] = React.useState(initState);
 
   React.useEffect(() => {
     store.subscribe(setGlobalState);

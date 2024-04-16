@@ -16,6 +16,8 @@ export default defineConfig({
       "@layout": resolve(__dirname, "src/layout"),
       "@router": resolve(__dirname, "src/router"),
       "@pages": resolve(__dirname, "src/pages"),
+      "@constants": resolve(__dirname, "src/constants"),
+      "@models": resolve(__dirname, "src/models"),
     },
   },
 });

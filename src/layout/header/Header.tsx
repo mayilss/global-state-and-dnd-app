@@ -1,4 +1,4 @@
-import { Button, Flex, Tabs, Typography } from "antd";
+import { Button, Col, Flex, Tabs, Typography } from "antd";
 import { PencilLine } from "lucide-react";
 import { items } from "./constants";
 import styles from "./header.styles";
@@ -11,27 +11,30 @@ export default function Header() {
   };
 
   return (
-    <Flex
-      component="header"
-      justify="space-between"
-      align="center"
-      style={styles.wrapper}
-    >
-      <Flex gap={8}>
-        <Typography.Text>Task Template</Typography.Text>
-        <PencilLine color="blue" width={20} />
-      </Flex>
-      <Tabs
-        items={items}
-        defaultActiveKey="1"
-        tabBarStyle={styles.tabBar}
-        onChange={onTabChange}
-      />
-      <Flex gap={8}>
-        <Button>Dublicate</Button>
-        <Button>Save Preview</Button>
-        <Button type="primary">Save</Button>
-      </Flex>
+    <Flex component="header" align="center" style={styles.wrapper}>
+      <Col span={8}>
+        <Flex gap={8}>
+          <Typography.Text>Task Template</Typography.Text>
+          <PencilLine color="blue" width={20} />
+        </Flex>
+      </Col>
+      <Col span={8}>
+        <Flex justify="center">
+          <Tabs
+            items={items}
+            defaultActiveKey="1"
+            tabBarStyle={styles.tabBar}
+            onChange={onTabChange}
+          />
+        </Flex>
+      </Col>
+      <Col span={8}>
+        <Flex gap={8} justify="flex-end">
+          <Button>Dublicate</Button>
+          <Button>Save Preview</Button>
+          <Button type="primary">Save</Button>
+        </Flex>
+      </Col>
     </Flex>
   );
 }

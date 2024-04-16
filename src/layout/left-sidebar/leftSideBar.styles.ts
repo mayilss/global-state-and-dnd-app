@@ -1,9 +1,10 @@
+import { colors } from "@constants";
 import React from "react";
 
 const wrapper: React.CSSProperties = {
   padding: "8px 16px 0 16px",
-  backgroundColor: "#fff",
-  borderRight: "1px solid #f3f3f3",
+  backgroundColor: colors.white,
+  height: "100%",
 };
 
 const fieldsetItem: React.CSSProperties = { padding: 4 };

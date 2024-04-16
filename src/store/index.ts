@@ -1,6 +1,18 @@
 import { createStore } from "@libs/global-state";
 
-const initialState = { count: 0, anotherCounter: 5 };
+interface GlobalState {
+  droppedItemId: string | null;
+  smileDisplayCount: number;
+  showSmileLabels: boolean;
+  selectedRateId: string | null;
+}
+
+const initialState: GlobalState = {
+  droppedItemId: null,
+  smileDisplayCount: 5,
+  showSmileLabels: true,
+  selectedRateId: null,
+};
 
 const globalStore = createStore(initialState);
 

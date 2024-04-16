@@ -1,24 +1,23 @@
 import { useDroppable } from "@dnd-kit/core";
-import { Flex } from "antd";
+import { Flex, Typography } from "antd";
+import styles from "./droppableArea.styles";
 
-export default function DroppableArea() {
-  const { isOver, setNodeRef } = useDroppable({
-    id: "droppable",
-  });
-  const style = {
-    color: isOver ? "green" : undefined,
-  };
+type DroppableAreaProps = { id: string };
+
+export default function DroppableArea({ id }: DroppableAreaProps) {
+  const { setNodeRef } = useDroppable({ id });
+
   return (
     <Flex
+      vertical
+      justify="center"
+      align="center"
       ref={setNodeRef}
-      style={{
-        width: "100%",
-        border: "1px dashed #c3c3c3",
-        height: 100,
-        ...style,
-      }}
+      style={styles.wrapper}
     >
-      DroppableArea
+      <Typography.Text style={styles.text}>
+        Drag and drop a question here
+      </Typography.Text>
     </Flex>
   );
 }
