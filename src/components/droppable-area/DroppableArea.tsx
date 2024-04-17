@@ -1,10 +1,11 @@
 import { useDroppable } from "@dnd-kit/core";
 import { Flex, Typography } from "antd";
 import styles from "./droppableArea.styles";
+import React from "react";
 
 type DroppableAreaProps = { id: string };
 
-export default function DroppableArea({ id }: DroppableAreaProps) {
+const DroppableArea = React.memo(({ id }: DroppableAreaProps) => {
   const { setNodeRef } = useDroppable({ id });
 
   return (
@@ -20,4 +21,6 @@ export default function DroppableArea({ id }: DroppableAreaProps) {
       </Typography.Text>
     </Flex>
   );
-}
+});
+
+export default DroppableArea;

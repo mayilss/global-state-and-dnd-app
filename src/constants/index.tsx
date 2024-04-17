@@ -28,80 +28,50 @@ export const questionTypes = [
     id: "voice-feedback",
     icon: <Mic strokeWidth={strokeWidth} width={iconWidth} />,
     label: "Voice feedback",
-    component: (
-      <div>
-        <Mic strokeWidth={strokeWidth} width={iconWidth} />
-      </div>
-    ),
+    component: <Mic strokeWidth={strokeWidth} width={iconWidth} />,
   },
   {
     id: "single-choice",
     icon: <CircleDot strokeWidth={strokeWidth} width={iconWidth} />,
     label: "Single choice",
-    component: (
-      <div>
-        <CircleDot strokeWidth={strokeWidth} width={iconWidth} />
-      </div>
-    ),
+    component: <CircleDot strokeWidth={strokeWidth} width={iconWidth} />,
   },
   {
     id: "multiple-choice",
     icon: <SquareCheckBig strokeWidth={strokeWidth} width={iconWidth} />,
     label: "Multiple choice",
-    component: (
-      <div>
-        <SquareCheckBig strokeWidth={strokeWidth} width={iconWidth} />
-      </div>
-    ),
+    component: <SquareCheckBig strokeWidth={strokeWidth} width={iconWidth} />,
   },
   {
     id: "media-file",
     icon: <Image strokeWidth={strokeWidth} width={iconWidth} />,
     label: "Media file",
-    component: (
-      <div>
-        <Image strokeWidth={strokeWidth} width={iconWidth} />
-      </div>
-    ),
+    component: <Image strokeWidth={strokeWidth} width={iconWidth} />,
   },
   {
     id: "date-option",
     icon: <Calendar strokeWidth={strokeWidth} width={iconWidth} />,
     label: "Date option",
-    component: (
-      <div>
-        <Calendar strokeWidth={strokeWidth} width={iconWidth} />
-      </div>
-    ),
+    component: <Calendar strokeWidth={strokeWidth} width={iconWidth} />,
   },
   {
     id: "text-input",
     icon: <FileType strokeWidth={strokeWidth} width={iconWidth} />,
     label: "Text input",
-    component: (
-      <div>
-        <FileType strokeWidth={strokeWidth} width={iconWidth} />
-      </div>
-    ),
+    component: <FileType strokeWidth={strokeWidth} width={iconWidth} />,
   },
   {
     id: "free-text",
     icon: <MessageSquarePlus strokeWidth={strokeWidth} width={iconWidth} />,
     label: "Free text",
     component: (
-      <div>
-        <MessageSquarePlus strokeWidth={strokeWidth} width={iconWidth} />
-      </div>
+      <MessageSquarePlus strokeWidth={strokeWidth} width={iconWidth} />
     ),
   },
   {
     id: "information",
     icon: <Info strokeWidth={strokeWidth} width={iconWidth} />,
     label: "Information",
-    component: (
-      <div>
-        <Info strokeWidth={strokeWidth} width={iconWidth} />
-      </div>
-    ),
+    component: <Info strokeWidth={strokeWidth} width={iconWidth} />,
   },
 ];

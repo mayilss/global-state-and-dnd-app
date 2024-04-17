@@ -1,24 +1,19 @@
+import { useGlobalState } from "@libs/global-state";
+import globalStore from "@store";
 import { Flex, Typography } from "antd";
 import { X } from "lucide-react";
 import RateOptions from "./components/rate-options/RateOptions";
-import { colors } from "@constants";
+import styles from "./rightSidebar.styles";
 
 export default function RightSidebar() {
+  const [droppedItemId] = useGlobalState(globalStore, "droppedItemId");
   return (
-    <Flex
-      vertical
-      gap={16}
-      style={{
-        padding: "8px 16px 0 16px",
-        backgroundColor: colors.white,
-        height: "100%",
-      }}
-    >
+    <Flex vertical gap={16} style={styles.wrapper}>
       <Flex justify="space-between">
         <Typography.Text>Template Editor</Typography.Text>
         <X width={20} />
       </Flex>
-      <RateOptions />
+      {droppedItemId === "smiley-rating" && <RateOptions />}
     </Flex>
   );
 }

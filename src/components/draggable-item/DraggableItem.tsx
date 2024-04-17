@@ -12,7 +12,7 @@ type DraggableItemProps = {
   id: string;
 };
 
-export default function DraggableItem({ icon, label, id }: DraggableItemProps) {
+const DraggableItem = React.memo(({ icon, label, id }: DraggableItemProps) => {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: id,
   });
@@ -38,4 +38,6 @@ export default function DraggableItem({ icon, label, id }: DraggableItemProps) {
       <GripHorizontal color={colors.grey} width={20} />
     </Flex>
   );
-}
+});
+
+export default DraggableItem;
